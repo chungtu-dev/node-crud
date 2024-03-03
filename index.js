@@ -16,9 +16,6 @@ app.use(cors())
 app.use(express.json({ limit: '350mb' }))
 app.use(express.urlencoded({ extended: true, limit: '350mb' }))
 
-// app.use('/posts', posts)
-// app.use('/products', products)
-
 const connect = async () => {
     try {
         await mongoose.connect(process.env.MONGO)
@@ -27,10 +24,6 @@ const connect = async () => {
     }
 }
 connect()
-
-// mongoose.connection.on("connected", () => {
-//     console.log("MONGO Connected");
-// })
 
 app.listen(PORT, () => {
     connect();
