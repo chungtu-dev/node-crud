@@ -13,7 +13,7 @@ const PORT = process.env.PORT
 app.use(cors())
 
 app.use(express.json({
-    limit: '30mb'
+    limit: '300mb'
 }))
 
 app.use('/posts', posts)
