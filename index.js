@@ -26,10 +26,11 @@ const connect = async () => {
         console.log("Error To Connect: ", error);
     }
 }
+connect()
 
-mongoose.connection.on("connected", () => {
-    console.log("MONGO Connected");
-})
+// mongoose.connection.on("connected", () => {
+//     console.log("MONGO Connected");
+// })
 
 app.listen(PORT, () => {
     connect();
