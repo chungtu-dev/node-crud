@@ -12,8 +12,8 @@ const PORT = process.env.PORT
 
 app.use(cors())
 
-app.use(express.json({ limit: '350mb' }))
-app.use(express.urlencoded({ extended: true, limit: '350mb' }))
+// app.use(express.json({ limit: '350mb' }))
+// app.use(express.urlencoded({ extended: true, limit: '350mb' }))
 
 app.use('/posts', posts)
 app.use('/products', products)
